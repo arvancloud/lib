@@ -1,0 +1,38 @@
+name: Library Report
+description: Report a missing file in the library or any other corruption
+title: "Report: <Library Name>"
+labels: ["⚠️ Library Report"]
+body:
+
+- type: markdown
+  attributes:
+    value: Please fill below form to help us improve ArvanCloud library as much as possible.
+
+- type: input
+  id: name
+  attributes:
+    label: "Library Name:"
+    description: "Enter library name."
+    placeholder: "vue"
+  validations:
+    required: true
+
+- type: input
+  id: address
+  attributes:
+    label: "Address:"
+    description: "Library's source address."
+    placeholder: "https://www.npmjs.com/package/vue or https://www.github.com/vuejs/vue"
+  validations:
+    required: true
+
+- type: textarea
+  id: list
+  attributes:
+    label: "Files List:"
+    description: "Enter list of files that are corrupt or missed."
+    placeholder: |
+      - vue.js
+      - vue.min.js
+  validations:
+    required: true
